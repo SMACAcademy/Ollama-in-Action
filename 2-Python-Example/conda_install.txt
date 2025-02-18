@@ -1,0 +1,7 @@
+#conda create -n langchain_py311 python=3.11
+
+#conda list env
+
+#conda activate langchain_py311
+
+#pip install ollama
