@@ -1,3 +1,5 @@
+#pip install pydantic ollama
+
 from pydantic import BaseModel
 
 from ollama import chat

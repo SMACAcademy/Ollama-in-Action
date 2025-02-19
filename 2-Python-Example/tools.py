@@ -44,7 +44,9 @@ subtract_two_numbers_tool = {
   },
 }
 
-messages = [{'role': 'user', 'content': 'What is three plus one?'}]
+#messages = [{'role': 'user', 'content': 'What is three plus one?'}]
+#messages = [{'role': 'user', 'content': 'What is three minus two?'}]
+messages = [{'role': 'user', 'content': 'What is three minus two plus eight?'}]
 print('Prompt:', messages[0]['content'])
 
 available_functions = {
