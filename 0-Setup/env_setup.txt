@@ -1,0 +1,2 @@
+echo %OLLAMA_HOST%
+set OLLAMA_HOST=

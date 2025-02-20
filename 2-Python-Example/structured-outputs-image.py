@@ -23,6 +23,7 @@ class ImageDescription(BaseModel):
   text_content: str | None = None
 
 
+# .\2-Python-Example\children-1822688_1280.jpg
 # Get path from user input
 path = input('Enter the path to your image: ')
 path = Path(path)
@@ -33,6 +34,8 @@ if not path.exists():
 
 # Set up chat as usual
 response = chat(
+  #llava
+  #llama3.2-vision
   model='llama3.2-vision',
   format=ImageDescription.model_json_schema(),  # Pass in the schema for the response
   messages=[
