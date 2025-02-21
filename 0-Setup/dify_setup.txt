@@ -1,0 +1,13 @@
+# Assuming current latest version is 0.15.3
+git clone https://github.com/langgenius/dify.git --branch 0.15.3
+
+
+cd dify/docker
+
+cp .env.example .env
+
+docker compose up -d
+
+docker compose down
+
+
