@@ -1,10 +1,22 @@
+import ollama  
+
+
 import gradio as gr
-from OllamaClient import OllamaClient  # Replace 'your_module_name' with the actual name of your Python file without the .py extension
 
 def query_ollama(prompt):
-    ollama_client = OllamaClient()
-    response = ollama_client.query(prompt)
-    return response
+    response = ollama.chat(
+        model="llama3.2",  
+        messages=[
+            #{"role": "user", "content": "Explain Embeddings and Vectors in AI."},  # User's input query
+            {"role": "user", "content": prompt},  # User's input query
+        ],
+    )
+
+    return response["message"]["content"]
+    
+    
+# Call the Ollama model to generate a response  
 
 interface = gr.Interface(fn=query_ollama, inputs="text", outputs="text")
-interface.launch(share="True")  # Set share to True to generate a public link
+#interface.launch()  # Set share to True to generate a public link
+interface.launch(share=True)  # Set share to True to generate a public link

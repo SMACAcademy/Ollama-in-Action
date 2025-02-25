@@ -21,7 +21,7 @@ def generate_response(msg: str, history: list[list[str, str]], system_prompt: st
 chatbot = gr.ChatInterface(
                 generate_response,
                 chatbot=gr.Chatbot(
-                        avatar_images=["user.jpg", "chatbot.png"],
+                        avatar_images=["user.png", "chatbot.png"],
                         height="64vh"
                     ),
                 additional_inputs=[
@@ -30,7 +30,7 @@ chatbot = gr.ChatInterface(
                         label="System Prompt"
                     )
                 ],
-                title="LLama-2 (7B) Chatbot using 'Ollama'",
+                title="LLama-3.2 Chatbot using 'Ollama'",
                 description="Feel free to ask any question.",
                 theme="soft",
                 submit_btn="Send"
